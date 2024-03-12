@@ -7,13 +7,14 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const MultiSelectDropdown = () => {
+
     const [selectedItems, setSelectedItems] = useState([]);
     const [selectedDiseases, setSelectedDiseases] = useState([]);
     const [diseaseData, setDiseaseData] = useState([]);
     const [listLoading, setListLoading] = useState(false);
 
     const symptomsArray = symptomsText.split('\n');
-
+    console.log(symptomsArray, "symptomsArray");
     const symptomsData = symptomsArray.map(symptom => ({
         label: symptom,
         value: symptom.replace(/_/g, ' ')
